@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Premises Checklist</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <div class="form-wrapper">
+        <!-- Decorative Left & Right Images -->
+        <img src="images/getlogged.png" class="decor-left" alt="Decoration">
+        <img src="images/getlogged.png" class="decor-right" alt="Decoration">
+
+        <!-- Header Banner -->
+        <div class="header">
+            <img src="images/PremiseschecksSmall.png" alt="Premises Banner" class="header-img">
+        </div>
+        
+        <form id="checklist-form">
+            <!-- Frequency selection -->
+            <div id="frequencyOptions">
+                <label style="font-weight:bold; font-size:1.1em;">Checklist</label>
+                <div class="freq-cards">
+
+                    <label class="freq-card" for="daily">
+                        <input type="radio" name="Frequency" value="Daily" id="daily">
+                        <div class="freq-card-inner">
+                            <span class="freq-icon">☀️</span>
+                            <span class="freq-label">Daily</span>
+                        </div>
+                    </label>
+
+                    <label class="freq-card" for="weekly">
+                        <input type="radio" name="Frequency" value="Weekly" id="weekly">
+                        <div class="freq-card-inner">
+                            <span class="freq-icon">📅</span>
+                            <span class="freq-label">Weekly</span>
+                            <span class="freq-sub">Fridays</span>
+                        </div>
+                    </label>
+
+                    <label class="freq-card" for="monthly">
+                        <input type="radio" name="Frequency" value="Monthly" id="monthly">
+                        <div class="freq-card-inner">
+                            <span class="freq-icon">🗓️</span>
+                            <span class="freq-label">Monthly</span>
+                            <span class="freq-sub">End of month</span>
+                        </div>
+                    </label>
+
+                    <label class="freq-card" for="additional">
+                        <input type="radio" name="Frequency" value="Additional" id="additional">
+                        <div class="freq-card-inner">
+                            <span class="freq-icon">➕</span>
+                            <span class="freq-label">Additional</span>
+                            <span class="freq-sub">Checks</span>
+                        </div>
+                    </label>
+
+                </div>
+            </div>
+
+            <!-- Daily time selection -->
+            <div id="dailyTime" class="question-set">
+                <label>Time of Day:</label><br>
+                <input type="radio" name="Time of Day" value="Morning" id="morning"> Morning<br>
+                <input type="radio" name="Time of Day" value="Afternoon" id="afternoon"> Afternoon<br>
+            </div>
+
+            <!-- Daily Morning Questions -->
+            <div id="morningQuestions" class="question-set">
+
+                <div class="question-item">
+                    <span>Open school at 6:00am and unlock external doors/windows</span><br>
+                    <label><input type="radio" name="Open school at 6:00am and unlock external doors/windows" value="Yes"> Yes</label>
+                    <label><input type="radio" name="Open school at 6:00am and unlock external doors/windows" value="No"> No</label>
+                    <div class="notes-box">
+                        <label>📝 Notes (required):</label>
+                        <textarea placeholder="Explain why this was not completed..."></textarea>
+                        <div class="notes-required-msg">A note is required when No is selected.</div>
+                    </div>
+                </div>
+
+                <div class="question-item">
+                    <span>Milk/fruit brought in and distributed</span><br>
+                    <label><input type="radio" name="Milk/fruit brought in and distributed" value="Yes"> Yes</label>
+                    <label><input type="radio" name="Milk/fruit brought in and distributed" value="No"> No</label>
+                    <div class="notes-box">
+                        <label>📝 Notes (required):</label>
+                        <textarea placeholder="Explain why this was not completed..."></textarea>
+                        <div class="notes-required-msg">A note is required when No is selected.</div>
+                    </div>
+                </div>
+
+                <div class="question-item">
+                    <span>Stock toilets, classrooms, admin, with tissue/soap including air freshener</span><br>
+                    <label><input type="radio" name="Stock toilets, classrooms, admin, with tissue/soap including air freshener" value="Yes"> Yes</label>
+                    <label><input type="radio" name="Stock toilets, classrooms, admin, with tissue/soap including air freshener" value="No"> No</label>
+                    <div class="notes-box">
+                        <label>📝 Notes (required):</label>
+                        <textarea placeholder="Explain why this was not completed..."></textarea>
+                        <div class="notes-required-msg">A note is required when No is selected.</div>
+                    </div>
+                </div>
+
+                <div class="question-item">
+                    <span>Check building and grounds for cleanliness/hazards</span><br>
+                    <label><input type="radio" name="Check building and grounds for cleanliness/hazards" value="Yes"> Yes</label>
+                    <label><input type="radio" name="Check building and grounds for cleanliness/hazards" value="No"> No</label>
+                    <div class="notes-box">
+                        <label>📝 Notes (required):</label>
+                        <textarea placeholder="Explain why this was not completed..."></textarea>
+                        <div class="notes-required-msg">A note is required when No is selected.</div>
+                    </div>
+                </div>
+
+                <div class="question-item">
+                    <span>Check playground equipment for damage/vandalism</span><br>
+                    <label><input type="radio" name="Check playground equipment for damage/vandalism" value="Yes"> Yes</label>
+                    <label><input type="radio" name="Check playground equipment for damage/vandalism" value="No"> No</label>
+                    <div class="notes-box">
+                        <label>📝 Notes (required):</label>
+                        <textarea placeholder="Explain why this was not completed..."></textarea>
+                        <div class="notes-required-msg">A note is required when No is selected.</div>
+                    </div>
+                </div>
+
+                <div class="question-item">
+                    <span>Fire doors are unlocked and clear</span><br>
+                    <label><input type="radio" name="Fire doors are unlocked and clear" value="Yes"> Yes</label>
+                    <label><input type="radio" name="Fire doors are unlocked and clear" value="No"> No</label>
+                    <div class="notes-box">
+                        <label>📝 Notes (required):</label>
+                        <textarea placeholder="Explain why this was not completed..."></textarea>
+                        <div class="notes-required-msg">A note is required when No is selected.</div>
+                    </div>
+                </div>
+
+                <div class="question-item">
+                    <span>Front of school cleaned and cleared of rubbish/weeds before 8:30am</span><br>
+                    <label><input type="radio" name="Front of school cleaned and cleared of rubbish/weeds before 8:30am" value="Yes"> Yes</label>
+                    <label><input type="radio" name="Front of school cleaned and cleared of rubbish/weeds before 8:30am" value="No"> No</label>
+                    <div class="notes-box">
+                        <label>📝 Notes (required):</label>
+                        <textarea placeholder="Explain why this was not completed..."></textarea>
+                        <div class="notes-required-msg">A note is required when No is selected.</div>
+                    </div>
+                </div>
+
+                <div class="question-item">
+                    <span>Gate duty 8:40-8:50am</span><br>
+                    <label><input type="radio" name="Gate duty 8:40-8:50am" value="Yes"> Yes</label>
+                    <label><input type="radio" name="Gate duty 8:40-8:50am" value="No"> No</label>
+                    <div class="notes-box">
+                        <label>📝 Notes (required):</label>
+                        <textarea placeholder="Explain why this was not completed..."></textarea>
+                        <div class="notes-required-msg">A note is required when No is selected.</div>
+                    </div>
+                </div>
+
+                <div class="question-item">
+                    <span>All external gates locked</span><br>
+                    <label><input type="radio" name="All external gates locked" value="Yes"> Yes</label>
+                    <label><input type="radio" name="All external gates locked" value="No"> No</label>
+                    <div class="notes-box">
+                        <label>📝 Notes (required):</label>
+                        <textarea placeholder="Explain why this was not completed..."></textarea>
+                        <div class="notes-required-msg">A note is required when No is selected.</div>
+                    </div>
+                </div>
+
+                <div class="question-item">
+                    <span>Lock premises cupboard</span><br>
+                    <label><input type="radio" name="Lock premises cupboard" value="Yes"> Yes</label>
+                    <label><input type="radio" name="Lock premises cupboard" value="No"> No</label>
+                    <div class="notes-box">
+                        <label>📝 Notes (required):</label>
+                        <textarea placeholder="Explain why this was not completed..."></textarea>
+                        <div class="notes-required-msg">A note is required when No is selected.</div>
+                    </div>
+                </div>
+
+                <div class="question-item">
+                    <span>Check deliveries and move to correct location</span><br>
+                    <label><input type="radio" name="Check deliveries and move to correct location" value="Yes"> Yes</label>
+                    <label><input type="radio" name="Check deliveries and move to correct location" value="No"> No</label>
+                    <div class="notes-box">
+                        <label>📝 Notes (required):</label>
+                        <textarea placeholder="Explain why this was not completed..."></textarea>
+                        <div class="notes-required-msg">A note is required when No is selected.</div>
+                    </div>
+                </div>
+
+                <div class="question-item">
+                    <span>Check Forest School for hazards/dead animals</span><br>
+                    <label><input type="radio" name="Check Forest School for hazards/dead animals" value="Yes"> Yes</label>
+                    <label><input type="radio" name="Check Forest School for hazards/dead animals" value="No"> No</label>
+                    <div class="notes-box">
+                        <label>📝 Notes (required):</label>
+                        <textarea placeholder="Explain why this was not completed..."></textarea>
+                        <div class="notes-required-msg">A note is required when No is selected.</div>
+                    </div>
+                </div>
+
+                <div class="question-item">
+                    <span>Check Premises Jobs List</span><br>
+                    <label><input type="radio" name="Check Premises Jobs List" value="Yes"> Yes</label>
+                    <label><input type="radio" name="Check Premises Jobs List" value="No"> No</label>
+                    <div class="notes-box">
+                        <label>📝 Notes (required):</label>
+                        <textarea placeholder="Explain why this was not completed..."></textarea>
+                        <div class="notes-required-msg">A note is required when No is selected.</div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Daily Afternoon Questions -->
+            <div id="afternoonQuestions" class="question-set">
+
+                <div class="question-item">
+                    <span>Empty external bins, check playground for litter</span><br>
+                    <label><input type="radio" name="Empty external bins, check playground for litter" value="Yes"> Yes</label>
+                    <label><input type="radio" name="Empty external bins, check playground for litter" value="No"> No</label>
+                    <div class="notes-box">
+                        <label>📝 Notes (required):</label>
+                        <textarea placeholder="Explain why this was not completed..."></textarea>
+                        <div class="notes-required-msg">A note is required when No is selected.</div>
+                    </div>
+                </div>
+
+                <div class="question-item">
+                    <span>Non-essentials electricals turned off (heaters & fans etc)</span><br>
+                    <label><input type="radio" name="Non-essentials electricals turned off (heaters & fans etc)" value="Yes"> Yes</label>
+                    <label><input type="radio" name="Non-essentials electricals turned off (heaters & fans etc)" value="No"> No</label>
+                    <div class="notes-box">
+                        <label>📝 Notes (required):</label>
+                        <textarea placeholder="Explain why this was not completed..."></textarea>
+                        <div class="notes-required-msg">A note is required when No is selected.</div>
+                    </div>
+                </div>
+
+                <div class="question-item">
+                    <span>Cleaners have completed all tasks before leaving</span><br>
+                    <label><input type="radio" name="Cleaners have completed all tasks before leaving" value="Yes"> Yes</label>
+                    <label><input type="radio" name="Cleaners have completed all tasks before leaving" value="No"> No</label>
+                    <div class="notes-box">
+                        <label>📝 Notes (required):</label>
+                        <textarea placeholder="Explain why this was not completed..."></textarea>
+                        <div class="notes-required-msg">A note is required when No is selected.</div>
+                    </div>
+                </div>
+
+                <div class="question-item">
+                    <span>Lock/secure external doors/windows</span><br>
+                    <label><input type="radio" name="Lock/secure external doors/windows" value="Yes"> Yes</label>
+                    <label><input type="radio" name="Lock/secure external doors/windows" value="No"> No</label>
+                    <div class="notes-box">
+                        <label>📝 Notes (required):</label>
+                        <textarea placeholder="Explain why this was not completed..."></textarea>
+                        <div class="notes-required-msg">A note is required when No is selected.</div>
+                    </div>
+                </div>
+
+                <div class="question-item">
+                    <span>Cleaning cupboard is locked and cleaning products are secure</span><br>
+                    <label><input type="radio" name="Cleaning cupboard is locked and cleaning products are secure" value="Yes"> Yes</label>
+                    <label><input type="radio" name="Cleaning cupboard is locked and cleaning products are secure" value="No"> No</label>
+                    <div class="notes-box">
+                        <label>📝 Notes (required):</label>
+                        <textarea placeholder="Explain why this was not completed..."></textarea>
+                        <div class="notes-required-msg">A note is required when No is selected.</div>
+                    </div>
+                </div>
+
+                <div class="question-item">
+                    <span>Premises office has been cleaned and desk wiped down</span><br>
+                    <label><input type="radio" name="Premises office has been cleaned and desk wiped down" value="Yes"> Yes</label>
+                    <label><input type="radio" name="Premises office has been cleaned and desk wiped down" value="No"> No</label>
+                    <div class="notes-box">
+                        <label>📝 Notes (required):</label>
+                        <textarea placeholder="Explain why this was not completed..."></textarea>
+                        <div class="notes-required-msg">A note is required when No is selected.</div>
+                    </div>
+                </div>
+
+                <div class="question-item">
+                    <span>Ensure nobody is left on site and set intruder alarm at 6pm Mon - Fri</span><br>
+                    <label><input type="radio" name="Ensure nobody is left on site and set intruder alarm at 6pm Mon - Fri" value="Yes"> Yes</label>
+                    <label><input type="radio" name="Ensure nobody is left on site and set intruder alarm at 6pm Mon - Fri" value="No"> No</label>
+                    <div class="notes-box">
+                        <label>📝 Notes (required):</label>
+                        <textarea placeholder="Explain why this was not completed..."></textarea>
+                        <div class="notes-required-msg">A note is required when No is selected.</div>
+                    </div>
+                </div>
+
+                <div class="question-item">
+                    <span>Jobs list checked and actioned</span><br>
+                    <label><input type="radio" name="Jobs list checked and actioned" value="Yes"> Yes</label>
+                    <label><input type="radio" name="Jobs list checked and actioned" value="No"> No</label>
+                    <div class="notes-box">
+                        <label>📝 Notes (required):</label>
+                        <textarea placeholder="Explain why this was not completed..."></textarea>
+                        <div class="notes-required-msg">A note is required when No is selected.</div>
+                    </div>
+                </div>
+
+                <div class="question-item">
+                    <span>Check emails and respond/action</span><br>
+                    <label><input type="radio" name="Check emails and respond/action" value="Yes"> Yes</label>
+                    <label><input type="radio" name="Check emails and respond/action" value="No"> No</label>
+                    <div class="notes-box">
+                        <label>📝 Notes (required):</label>
+                        <textarea placeholder="Explain why this was not completed..."></textarea>
+                        <div class="notes-required-msg">A note is required when No is selected.</div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Weekly Questions -->
+            <div id="weeklyQuestions" class="question-set">
+
+                <div class="question-item">
+                    <span>Fire alarm test - separate form</span><br>
+                    <label><input type="radio" name="Fire alarm test - separate form" value="Yes"> Yes</label>
+                    <label><input type="radio" name="Fire alarm test - separate form" value="No"> No</label>
+                    <div class="notes-box">
+                        <label>📝 Notes (required):</label>
+                        <textarea placeholder="Explain why this was not completed..."></textarea>
+                        <div class="notes-required-msg">A note is required when No is selected.</div>
+                    </div>
+                </div>
+
+                <div class="question-item">
+                    <span>External bins emptied/changed (including carpark), twice during summer</span><br>
+                    <label><input type="radio" name="External bins emptied/changed (including carpark), twice during summer" value="Yes"> Yes</label>
+                    <label><input type="radio" name="External bins emptied/changed (including carpark), twice during summer" value="No"> No</label>
+                    <div class="notes-box">
+                        <label>📝 Notes (required):</label>
+                        <textarea placeholder="Explain why this was not completed..."></textarea>
+                        <div class="notes-required-msg">A note is required when No is selected.</div>
+                    </div>
+                </div>
+
+                <div class="question-item">
+                    <span>Bins collected by Tuesday PM</span><br>
+                    <label><input type="radio" name="Bins collected by Tuesday PM" value="Yes"> Yes</label>
+                    <label><input type="radio" name="Bins collected by Tuesday PM" value="No"> No</label>
+                    <div class="notes-box">
+                        <label>📝 Notes (required):</label>
+                        <textarea placeholder="Explain why this was not completed..."></textarea>
+                        <div class="notes-required-msg">A note is required when No is selected.</div>
+                    </div>
+                </div>
+
+                <div class="question-item">
+                    <span>Check internal & external lights</span><br>
+                    <label><input type="radio" name="Check internal & external lights" value="Yes"> Yes</label>
+                    <label><input type="radio" name="Check internal & external lights" value="No"> No</label>
+                    <div class="notes-box">
+                        <label>📝 Notes (required):</label>
+                        <textarea placeholder="Explain why this was not completed..."></textarea>
+                        <div class="notes-required-msg">A note is required when No is selected.</div>
+                    </div>
+                </div>
+
+                <div class="question-item">
+                    <span>Check fire equipment for damage</span><br>
+                    <label><input type="radio" name="Check fire equipment for damage" value="Yes"> Yes</label>
+                    <label><input type="radio" name="Check fire equipment for damage" value="No"> No</label>
+                    <div class="notes-box">
+                        <label>📝 Notes (required):</label>
+                        <textarea placeholder="Explain why this was not completed..."></textarea>
+                        <div class="notes-required-msg">A note is required when No is selected.</div>
+                    </div>
+                </div>
+
+                <div class="question-item">
+                    <span>Check sanitary bins are in good order</span><br>
+                    <label><input type="radio" name="Check sanitary bins are in good order" value="Yes"> Yes</label>
+                    <label><input type="radio" name="Check sanitary bins are in good order" value="No"> No</label>
+                    <div class="notes-box">
+                        <label>📝 Notes (required):</label>
+                        <textarea placeholder="Explain why this was not completed..."></textarea>
+                        <div class="notes-required-msg">A note is required when No is selected.</div>
+                    </div>
+                </div>
+
+                <div class="question-item">
+                    <span>Check childrens toilet locks are working</span><br>
+                    <label><input type="radio" name="Check childrens toilet locks are working" value="Yes"> Yes</label>
+                    <label><input type="radio" name="Check childrens toilet locks are working" value="No"> No</label>
+                    <div class="notes-box">
+                        <label>📝 Notes (required):</label>
+                        <textarea placeholder="Explain why this was not completed..."></textarea>
+                        <div class="notes-required-msg">A note is required when No is selected.</div>
+                    </div>
+                </div>
+
+                <div class="question-item">
+                    <span>External escape staircases and gangways</span><br>
+                    <label><input type="radio" name="External escape staircases and gangways" value="Yes"> Yes</label>
+                    <label><input type="radio" name="External escape staircases and gangways" value="No"> No</label>
+                    <div class="notes-box">
+                        <label>📝 Notes (required):</label>
+                        <textarea placeholder="Explain why this was not completed..."></textarea>
+                        <div class="notes-required-msg">A note is required when No is selected.</div>
+                    </div>
+                </div>
+
+                <div class="question-item">
+                    <span>Run water taps</span><br>
+                    <label><input type="radio" name="Run water taps" value="Yes"> Yes</label>
+                    <label><input type="radio" name="Run water taps" value="No"> No</label>
+                    <div class="notes-box">
+                        <label>📝 Notes (required):</label>
+                        <textarea placeholder="Explain why this was not completed..."></textarea>
+                        <div class="notes-required-msg">A note is required when No is selected.</div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Monthly Questions -->
+            <div id="monthlyQuestions" class="question-set">
+
+                <div class="question-item">
+                    <span>Internal door checks - separate form</span><br>
+                    <label><input type="radio" name="Internal door checks - separate form" value="Yes"> Yes</label>
+                    <label><input type="radio" name="Internal door checks - separate form" value="No"> No</label>
+                    <div class="notes-box">
+                        <label>📝 Notes (required):</label>
+                        <textarea placeholder="Explain why this was not completed..."></textarea>
+                        <div class="notes-required-msg">A note is required when No is selected.</div>
+                    </div>
+                </div>
+
+                <div class="question-item">
+                    <span>Emergency lights test - separate form</span><br>
+                    <label><input type="radio" name="Emergency lights test - separate form" value="Yes"> Yes</label>
+                    <label><input type="radio" name="Emergency lights test - separate form" value="No"> No</label>
+                    <div class="notes-box">
+                        <label>📝 Notes (required):</label>
+                        <textarea placeholder="Explain why this was not completed..."></textarea>
+                        <div class="notes-required-msg">A note is required when No is selected.</div>
+                    </div>
+                </div>
+
+                <div class="question-item">
+                    <span>External bins cleaned</span><br>
+                    <label><input type="radio" name="External bins cleaned" value="Yes"> Yes</label>
+                    <label><input type="radio" name="External bins cleaned" value="No"> No</label>
+                    <div class="notes-box">
+                        <label>📝 Notes (required):</label>
+                        <textarea placeholder="Explain why this was not completed..."></textarea>
+                        <div class="notes-required-msg">A note is required when No is selected.</div>
+                    </div>
+                </div>
+
+                <div class="question-item">
+                    <span>Consumables received from S&D and signed for and DATED</span><br>
+                    <label><input type="radio" name="Consumables received from S&D and signed for and DATED" value="Yes"> Yes</label>
+                    <label><input type="radio" name="Consumables received from S&D and signed for and DATED" value="No"> No</label>
+                    <div class="notes-box">
+                        <label>📝 Notes (required):</label>
+                        <textarea placeholder="Explain why this was not completed..."></textarea>
+                        <div class="notes-required-msg">A note is required when No is selected.</div>
+                    </div>
+                </div>
+
+                <div class="question-item">
+                    <span>Stock check and order where necessary</span><br>
+                    <label><input type="radio" name="Stock check and order where necessary" value="Yes"> Yes</label>
+                    <label><input type="radio" name="Stock check and order where necessary" value="No"> No</label>
+                    <div class="notes-box">
+                        <label>📝 Notes (required):</label>
+                        <textarea placeholder="Explain why this was not completed..."></textarea>
+                        <div class="notes-required-msg">A note is required when No is selected.</div>
+                    </div>
+                </div>
+
+                <div class="question-item">
+                    <span>Check all toilet air fresheners and batteries</span><br>
+                    <label><input type="radio" name="Check all toilet air fresheners and batteries" value="Yes"> Yes</label>
+                    <label><input type="radio" name="Check all toilet air fresheners and batteries" value="No"> No</label>
+                    <div class="notes-box">
+                        <label>📝 Notes (required):</label>
+                        <textarea placeholder="Explain why this was not completed..."></textarea>
+                        <div class="notes-required-msg">A note is required when No is selected.</div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Additional Checks Questions -->
+            <div id="additionalQuestions" class="question-set">
+
+                <!-- Lift Maintenance -->
+                <div class="question-item">
+                    <span>Lift maintenance visit</span><br>
+                    <label><input type="radio" name="Lift maintenance visit" value="Yes" onclick="showDateField('liftDate')"> Yes</label>
+                    <label><input type="radio" name="Lift maintenance visit" value="No" onclick="hideDateField('liftDate')"> No</label>
+                    <div class="notes-box">
+                        <label>📝 Notes (required):</label>
+                        <textarea placeholder="Explain why this was not completed..."></textarea>
+                        <div class="notes-required-msg">A note is required when No is selected.</div>
+                    </div>
+                </div>
+                <div id="liftDate" class="date-field">
+                    <label>Lift maintenance date:</label>
+                    <input type="date" name="Lift maintenance date">
+                </div>
+
+                <div class="question-item">
+                    <span>Lift Report received & filed</span><br>
+                    <label><input type="radio" name="Lift Report received & filed" value="Yes"> Yes</label>
+                    <label><input type="radio" name="Lift Report received & filed" value="No"> No</label>
+                    <div class="notes-box">
+                        <label>📝 Notes (required):</label>
+                        <textarea placeholder="Explain why this was not completed..."></textarea>
+                        <div class="notes-required-msg">A note is required when No is selected.</div>
+                    </div>
+                </div>
+
+                <!-- Water Monitoring -->
+                <div class="question-item">
+                    <span>Water Monitoring visit</span><br>
+                    <label><input type="radio" name="Water Monitoring visit" value="Yes" onclick="showDateField('waterDate')"> Yes</label>
+                    <label><input type="radio" name="Water Monitoring visit" value="No" onclick="hideDateField('waterDate')"> No</label>
+                    <div class="notes-box">
+                        <label>📝 Notes (required):</label>
+                        <textarea placeholder="Explain why this was not completed..."></textarea>
+                        <div class="notes-required-msg">A note is required when No is selected.</div>
+                    </div>
+                </div>
+                <div id="waterDate" class="date-field">
+                    <label>Water Monitoring date:</label>
+                    <input type="date" name="Water Monitoring date">
+                </div>
+
+                <div class="question-item">
+                    <span>Water Report received & filed</span><br>
+                    <label><input type="radio" name="Water Report received & filed" value="Yes"> Yes</label>
+                    <label><input type="radio" name="Water Report received & filed" value="No"> No</label>
+                    <div class="notes-box">
+                        <label>📝 Notes (required):</label>
+                        <textarea placeholder="Explain why this was not completed..."></textarea>
+                        <div class="notes-required-msg">A note is required when No is selected.</div>
+                    </div>
+                </div>
+
+                <!-- Pest Control -->
+                <div class="question-item">
+                    <span>Pest Control visit</span><br>
+                    <label><input type="radio" name="Pest Control visit" value="Yes" onclick="showDateField('pestDate')"> Yes</label>
+                    <label><input type="radio" name="Pest Control visit" value="No" onclick="hideDateField('pestDate')"> No</label>
+                    <div class="notes-box">
+                        <label>📝 Notes (required):</label>
+                        <textarea placeholder="Explain why this was not completed..."></textarea>
+                        <div class="notes-required-msg">A note is required when No is selected.</div>
+                    </div>
+                </div>
+                <div id="pestDate" class="date-field">
+                    <label>Pest Control date:</label>
+                    <input type="date" name="Pest Control date">
+                </div>
+
+                <div class="question-item">
+                    <span>Pest Report received & filed</span><br>
+                    <label><input type="radio" name="Pest Report received & filed" value="Yes"> Yes</label>
+                    <label><input type="radio" name="Pest Report received & filed" value="No"> No</label>
+                    <div class="notes-box">
+                        <label>📝 Notes (required):</label>
+                        <textarea placeholder="Explain why this was not completed..."></textarea>
+                        <div class="notes-required-msg">A note is required when No is selected.</div>
+                    </div>
+                </div>
+
+                <!-- Sanitary Bins -->
+                <div class="question-item">
+                    <span>Sanitary Bins visit</span><br>
+                    <label><input type="radio" name="Sanitary Bins visit" value="Yes" onclick="showDateField('sanitaryDate')"> Yes</label>
+                    <label><input type="radio" name="Sanitary Bins visit" value="No" onclick="hideDateField('sanitaryDate')"> No</label>
+                    <div class="notes-box">
+                        <label>📝 Notes (required):</label>
+                        <textarea placeholder="Explain why this was not completed..."></textarea>
+                        <div class="notes-required-msg">A note is required when No is selected.</div>
+                    </div>
+                </div>
+                <div id="sanitaryDate" class="date-field">
+                    <label>Sanitary Bins date:</label>
+                    <input type="date" name="Sanitary Bins date">
+                </div>
+
+                <div class="question-item">
+                    <span>Sanitary Report received & filed</span><br>
+                    <label><input type="radio" name="Sanitary Report received & filed" value="Yes"> Yes</label>
+                    <label><input type="radio" name="Sanitary Report received & filed" value="No"> No</label>
+                    <div class="notes-box">
+                        <label>📝 Notes (required):</label>
+                        <textarea placeholder="Explain why this was not completed..."></textarea>
+                        <div class="notes-required-msg">A note is required when No is selected.</div>
+                    </div>
+                </div>
+
+            </div>
+
+            <input type="submit" value="Submit Checklist" class="btn-submit">
+        </form>
+
+        <!-- Success Popup (OUTSIDE form, ONLY ONE) -->
+        <div id="success-popup">
+            <div class="success-content">
+                <h2>✔ Submitted Successfully!</h2>
+                <p>Thank you! Your checklist has been recorded.</p>
+                <button id="success-close" type="button">OK</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
